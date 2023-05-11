@@ -1,0 +1,11 @@
+/*Had to change the blue original thumb of the slider with css to something else
+ to match the color scheme
+*/
+
+.slider .thumb {
+    -fx-background-color: rgb(20, 20, 20);
+}
+
+.slider .axis {
+    -fx-tick-label-fill: rgb(250, 250, 250);
+}
