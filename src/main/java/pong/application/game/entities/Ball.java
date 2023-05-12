@@ -42,8 +42,8 @@ public class Ball {
         } else {
             upOrDown = 1;
         }
-        this.ySpeed = (int) (upOrDown * difficulty * Math.sin(0.25));
-        this.xSpeed = (int) (leftOrRight * Math.sqrt(difficulty * difficulty - (ySpeed * ySpeed)));
+        this.ySpeed = (upOrDown);
+        this.xSpeed = (leftOrRight * difficulty);
     }
 
     /**
@@ -68,30 +68,29 @@ public class Ball {
     }
 
     /**
-     * Checks if the ball hits the player, if yes then the method calculates its relative and normalized position in players
+     * Checks if the ball hits the player, if yes then the method calculates its
+     * relative and normalized position in players
      * y-axis and uses math to calculates angle the ball should go next
      */
     public void hitsPlayer(int playeryPos) {
         if (yPos + Config.ballRadius >= playeryPos && yPos <= playeryPos + playerHeight) {
             double relative = playeryPos + (playerHeight / 2) - yPos;
             double normal = relative / (playerHeight / 2);
-            this.ySpeed = (int) (difficulty * -Math.sin(normal));
+            this.ySpeed = (int) (difficulty * -normal);
             checkIfBallTooFar(playeryPos);
-            this.xSpeed = xSpeed + 1;
             this.xSpeed *= -1;
         }
     }
 
     /**
-     * Checks if the ball goes too far in to the paddle, where it would start looping inside the paddle
+     * Checks if the ball goes too far in to the paddle, where it would start
+     * looping inside the paddle
      */
     public void checkIfBallTooFar(int playeryPos) {
         if (this.xPos < playeryPos) {
             this.xPos -= xSpeed;
-            xSpeed -= 1;
         } else if (this.xPos > playeryPos) {
             this.xPos -= xSpeed;
-            xSpeed += 1;
         }
     }
 
@@ -102,7 +101,6 @@ public class Ball {
         this.xPos += this.xSpeed;
         this.yPos += this.ySpeed;
     }
-
 
     public int getxPos() {
         return xPos;
