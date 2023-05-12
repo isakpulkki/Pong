@@ -21,15 +21,14 @@ public class ConfigDao {
             createDatabase(connection);
             getConfigurations(connection);
             connection.close();
-        } catch (
-                SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
-    }
-
+    } 
 
     /**
-     * Gets different attributes from the database to the application's configuration
+     * Gets different attributes from the database to the application's
+     * configuration
      */
 
     public static void createDatabase(Connection connection) throws SQLException {
@@ -52,6 +51,7 @@ public class ConfigDao {
             Config.ballRadius = rs.getInt("ballRadius");
         }
     }
+
     /**
      * Updates value modified in SettingsScene
      */
@@ -60,13 +60,12 @@ public class ConfigDao {
             Connection connection = DriverManager.getConnection("jdbc:sqlite:" + dbName + ".db");
             Statement statement = connection.createStatement();
             statement.executeUpdate("UPDATE config SET " + row + " = " + value + " WHERE id = 1");
-            if (row.equals("playerHeight")){
+            if (row.equals("playerHeight")) {
                 Config.playerHeight = value;
-            }
-            else if (row.equals("difficulty")){
+            } else if (row.equals("difficulty")) {
                 Config.difficulty = value;
             }
-            if (row.equals("ballRadius")){
+            if (row.equals("ballRadius")) {
                 Config.ballRadius = value;
             }
             connection.close();

@@ -29,7 +29,7 @@ public class CustomSlider extends Config {
         slider.setSnapToTicks(true);
         slider.setMaxWidth(width / 5);
         slider.setShowTickLabels(true);
-        //Some custom css to get the slider to match the application's theme
+        // Some custom css to get the slider to match the application's theme
         slider.getStylesheets().add(getClass().getResource("/slider.css").toExternalForm());
         return slider;
     }

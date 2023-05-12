@@ -4,6 +4,7 @@ import javafx.scene.control.Button;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.paint.Color;
 import pong.data.Config;
+
 /**
  * Creates customized button
  */

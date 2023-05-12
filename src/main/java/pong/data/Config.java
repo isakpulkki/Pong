@@ -2,9 +2,9 @@ package pong.data;
 
 import javafx.scene.text.Font;
 
-
 /**
- * This is universal kind of interface for all the classes to get game's configurations like user interfaces width,
+ * This is universal kind of interface for all the classes to get game's
+ * configurations like user interfaces width,
  * height etc. Which can be selected in the main-method
  */
 
