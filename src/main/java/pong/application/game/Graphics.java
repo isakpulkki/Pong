@@ -7,7 +7,6 @@ import javafx.scene.text.TextAlignment;
 import pong.application.game.entities.Ball;
 import pong.application.game.entities.Player;
 import pong.data.Config;
-
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import java.io.IOException;
@@ -34,7 +33,8 @@ public class Graphics {
     }
 
     /**
-     * This method initializes the games graphics and makes the calls for games logic
+     * This method initializes the games graphics and makes the calls for games
+     * logic
      */
     public void getGraphics() throws UnsupportedAudioFileException, LineUnavailableException, IOException {
         logic.getGameLogic();
@@ -133,13 +133,17 @@ public class Graphics {
 
         Image image = new Image("/pngs/up.png", 80, 80, false, false);
         graphicsContext.fillText("Press a button to start", width / 2, (height) / 2);
-        graphicsContext.drawImage(image, width - image.getWidth() * 2, (height - image.getHeight() / 2) / 2 - (image.getHeight() / 1.5));
+        graphicsContext.drawImage(image, width - image.getWidth() * 2,
+                (height - image.getHeight() / 2) / 2 - (image.getHeight() / 1.5));
         image = new Image("/pngs/down.png", 80, 80, false, false);
-        graphicsContext.drawImage(image, width - image.getWidth() * 2, (height - image.getHeight() / 2) / 2 + (image.getHeight() / 1.5));
+        graphicsContext.drawImage(image, width - image.getWidth() * 2,
+                (height - image.getHeight() / 2) / 2 + (image.getHeight() / 1.5));
         image = new Image("/pngs/w.png", 80, 80, false, false);
-        graphicsContext.drawImage(image, image.getWidth(), (height - image.getHeight() / 2) / 2 - image.getHeight() / 1.5);
+        graphicsContext.drawImage(image, image.getWidth(),
+                (height - image.getHeight() / 2) / 2 - image.getHeight() / 1.5);
         image = new Image("/pngs/s.png", 80, 80, false, false);
-        graphicsContext.drawImage(image, image.getWidth(), (height - image.getHeight() / 2) / 2 + image.getHeight() / 1.5);
+        graphicsContext.drawImage(image, image.getWidth(),
+                (height - image.getHeight() / 2) / 2 + image.getHeight() / 1.5);
         image = new Image("/pngs/esc.png", 80, 80, false, false);
         graphicsContext.drawImage(image, width / 2 - (image.getWidth() / 2), ((height - image.getHeight() * 1.2)));
         graphicsContext.fillText("Main menu", width / 2, (height - (image.getHeight() * 1.5)));
