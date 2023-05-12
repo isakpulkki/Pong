@@ -1,12 +1,9 @@
 package pong.application.settings;
 
-import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import javafx.util.StringConverter;
-import pong.application.ui.SettingsUi;
 import pong.data.Config;
 import pong.data.ConfigDao;
-import pong.utils.CustomButton;
 import pong.utils.CustomSlider;
 
 /**
@@ -41,11 +38,11 @@ public class SettingsLogic {
     }
 
     /**
-     * Creates slider to control the ball's speed
+     * Creates slider to control the balls speed
      */
 
     public Slider difficultySlider() {
-        Slider slider = new CustomSlider(6, 14, 4).getCustomSlider();
+        Slider slider = new CustomSlider(3, 5, 1).getCustomSlider();
         slider.setValue(Config.difficulty);
         slider.setLabelFormatter(customSliderLabels("Easy", "Default", "Hard", slider));
         slider.setOnMouseReleased(e -> {
