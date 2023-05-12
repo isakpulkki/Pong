@@ -8,7 +8,7 @@ The program includes settings such as adjusting the size of the ball and changin
 
 ## Instructions
 
-Download the JAR-file from [here](https://github.com/isakpulkki/ot-harjoitustyo/releases/tag/loppupalautus) or download the source code and follow the instructions below. Tested with Java JDK 11.
+Download the source code and follow the instructions below. Tested with Java JDK 11.
 
 ```bash
 # Run the program
@@ -30,12 +30,12 @@ mvn package
 mvn javadoc:javadoc
 ```
 
-You can modify some of the games configuration in [config.properties](https://github.com/isakpulkki/ot-harjoitustyo/releases/tag/loppupalautus) -file.
+You can modify some of the games configuration in [config.properties](https://github.com/isakpulkki/Pong/blob/main/src/main/resources/config.properties) -file.
 
 ## Documentation
 
-* [Specification](https://github.com/isakpulkki/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+* [Specification](https://github.com/isakpulkki/Pong/blob/main/docs/specification.md)
 
-* [Testing](https://github.com/isakpulkki/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md)
+* [Testing](https://github.com/isakpulkki/Pong/blob/main/docs/testing.md)
 
 
