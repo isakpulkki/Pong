@@ -1,4 +1,5 @@
 package pong.application.game.entities;
+
 import pong.data.Config;
 
 /**
@@ -47,7 +48,6 @@ public class Player {
         this.yPos -= Config.playerSpeed;
     }
 
-
     public int getxPos() {
         return xPos;
     }
@@ -55,7 +55,6 @@ public class Player {
     public int getyPos() {
         return yPos;
     }
-
 
     public int getScore() {
         return this.score;
