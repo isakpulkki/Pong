@@ -10,7 +10,6 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import pong.application.game.Graphics;
 import pong.data.Config;
-
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import java.io.IOException;
@@ -28,14 +27,15 @@ public class GameUi {
     }
 
     /**
-     * Creates PongScene and uses GameGraphics -class to draw the graphic's to canvas
+     * Creates PongScene and uses GameGraphics -class to draw the graphic's to
+     * canvas
      */
     public void getGameScene() {
         Canvas canvas = new Canvas(Config.width, Config.height);
         canvas.setFocusTraversable(true);
         javafx.scene.canvas.GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
         Graphics graphics = new Graphics(graphicsContext);
-        KeyFrame keyframe = new KeyFrame(Duration.millis(15), e -> {
+        KeyFrame keyframe = new KeyFrame(Duration.millis(6), e -> {
             try {
                 graphics.getGraphics();
             } catch (UnsupportedAudioFileException | LineUnavailableException | IOException ex) {
@@ -84,14 +84,11 @@ public class GameUi {
         canvas.setOnKeyReleased(e -> {
             if (e.getCode() == KeyCode.DOWN) {
                 graphics.getGameLogic().setDownPressed(false);
-            }
-            else if (e.getCode() == KeyCode.UP) {
+            } else if (e.getCode() == KeyCode.UP) {
                 graphics.getGameLogic().setUpPressed(false);
-            }
-            else if (e.getCode() == KeyCode.S) {
+            } else if (e.getCode() == KeyCode.S) {
                 graphics.getGameLogic().setsPressed(false);
-            }
-            else if (e.getCode() == KeyCode.W) {
+            } else if (e.getCode() == KeyCode.W) {
                 graphics.getGameLogic().setwPressed(false);
             }
         });

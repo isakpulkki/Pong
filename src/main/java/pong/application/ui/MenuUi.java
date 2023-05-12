@@ -11,7 +11,6 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import pong.data.Config;
 import pong.utils.CustomButton;
-import pong.data.ConfigDao;
 
 /**
  * Creates Menu -scene for the application
@@ -27,7 +26,6 @@ public class MenuUi {
     public MenuUi(Stage stage) {
         this.stage = stage;
     }
-
 
     /**
      * Creates MenuScene with all of its components and shows it
@@ -54,7 +52,8 @@ public class MenuUi {
     }
 
     /**
-     * Makes the buttons for this scene, using my 'MenuButton' -class tu customize them
+     * Makes the buttons for this scene, using my 'MenuButton' -class tu customize
+     * them
      */
 
     public void getMenuButtons() {
