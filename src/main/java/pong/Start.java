@@ -6,7 +6,8 @@ import javafx.stage.Stage;
 import pong.application.ui.MenuUi;
 
 /**
- * Launches the actual application and sets MenuScene as the first scene, two mains got rid of a bug
+ * Launches the actual application and sets MenuScene as the first scene, two
+ * mains got rid of a bug
  */
 
 public class Start extends Application {

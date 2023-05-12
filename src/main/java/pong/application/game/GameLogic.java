@@ -1,4 +1,5 @@
 package pong.application.game;
+
 import pong.application.game.entities.Ball;
 import pong.application.game.entities.Player;
 import pong.data.Config;
@@ -20,11 +21,11 @@ public class GameLogic {
     private boolean winnerRight;
     public boolean gameInProgress;
 
+
     public GameLogic() {
         leftPlayer = new Player(8, Config.height / 2 - (100 / 2));
         rightPlayer = new Player(Config.width - Config.playerWidth - 8, Config.height / 2 - (100 / 2));
         this.gameStarted = false;
-
     }
 
     /**
@@ -155,21 +156,17 @@ public class GameLogic {
         return ball;
     }
 
-
     public void setwPressed(boolean wPressed) {
         this.wPressed = wPressed;
     }
-
 
     public void setsPressed(boolean sPressed) {
         this.sPressed = sPressed;
     }
 
-
     public void setUpPressed(boolean upPressed) {
         this.upPressed = upPressed;
     }
-
 
     public void setDownPressed(boolean downPressed) {
         this.downPressed = downPressed;
